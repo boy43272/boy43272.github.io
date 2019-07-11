@@ -9,6 +9,7 @@
     <style>
         body {
             margin: 0;
+            background: #FFDBBD;
         }
 
         li{
@@ -25,6 +26,15 @@
             background-image: url(pic/b.jpg);
             background-size: cover;
             /* float: left; */
+        }
+        #head .head-transform{
+            /* float: left; */
+            width: 1920px;
+            height: 470px;
+            position: absolute;
+            top: 470px;
+            /* background: #000; */
+            /* margin-top: 470px; */
         }
 
         #head .head-banner {
@@ -99,17 +109,17 @@
             width: 1200px;
             height: 1080px;
             position: relative;
-            background: gray;
+            background-color: ;
             background-image: url(pic/c.jpg);
             background-size: cover;
             background-position: right;
-            
+            /* opacity: 0.5; */
         }
-        .content1-pic1{
+        #content .content-content1 .content1-pic1{
             width: 300px;
             height: 500px;
             position: absolute;
-            left: 140px;
+            left: 0px;
             top: 300px;
             background: white;
             background-image: url(pic/d.jpg);
@@ -131,7 +141,7 @@
             width: 300px;
             height: 500px;
             position: absolute;
-            left: 760px;
+            left: 900px;
             top: 300px;
             background: white;
             background-image: url(pic/f.jpg);
@@ -154,7 +164,7 @@
             left: 700px;
             top: 300px;
             /* background: #000; */
-            background-image: url(pic/a.png);
+            background-image: url(pic/a.svg);
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
@@ -197,6 +207,7 @@
             background-image: url(pic/l.jpg);
             background-size: cover;
             background-position: bottom;
+            /* opacity: 0; */
             /* border: 1px solid #000; */
         }
         .content4-head{
@@ -209,8 +220,16 @@
             line-height: 70px;
             text-align: center;
             letter-spacing: 5px;
-            color: gray;
-            background: rgba();
+            color: white;
+            /* background: rgba(0,0,0,0.5); */
+            opacity: 0;
+        }
+        .content4-head:hover{
+            opacity: 1;
+        }
+        #four:hover{
+            background: rgba(0, 0, 0, 0.9);
+            /* opacity: 1; */
         }
         #four .title{
             margin: 0;
@@ -316,7 +335,7 @@
         }
         a{
             text-decoration: none;
-            color: #000;
+            color: gray;
         }
         a:hover{
             color: #B36140;
@@ -326,6 +345,7 @@
 
 <body>
     <div id="head">
+        <!-- <div class="head-transform"></div> -->
         <div class="head-banner"></div>
         <div class="head-nav">
             <div class="nav-item1">

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>javascript</title>
+</head>
+
+<body>
+    <div class="box0">
+        <p id="box2">欸醜八怪</p>
+        <button onclick="box4()">按鈕</button>
+    </div>
+
+    <script>
+        function box4(){
+            // console.log("i will be back");
+            var box1 ;
+            box1 = document.querySelector("#box2");
+            //  box1.textContent = "sorry";
+
+            var now;
+            now = box1.textContent;
+
+            if(now == "欸醜八怪"){
+                box1.textContent = "sorry";
+            }else{
+                box1.textContent = "欸醜八怪";
+            }
+        }
+    </script>
+</body>
+
+</html>

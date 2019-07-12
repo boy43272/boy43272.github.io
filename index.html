@@ -1,422 +1,143 @@
 <!DOCTYPE html>
 <html lang="zh-tw">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>小小綠島</title>
+    <title>tabs html</title>
     <style>
-        body {
-            margin: 0;
-            background: #FFDBBD;
-        }
-
-        li{
-            list-style: none;
-        }
-
-        li:hover{
-            color: #B36140;
-        }
-        #head {
-            width: 1920px;
-            height: 940px;
-            /* border: 1px solid #000; */
-            background-image: url(pic/b.jpg);
-            background-size: cover;
-            /* float: left; */
-        }
-        #head .head-transform{
-            /* float: left; */
-            width: 1920px;
-            height: 470px;
-            position: absolute;
-            top: 470px;
-            /* background: #000; */
-            /* margin-top: 470px; */
-        }
-
-        #head .head-banner {
-            width: 1920px;
-            height: calc(940px - 200px);
-            /* border: 1px solid #000; */
-            /* background-image: url(pic/b.jpg);
-            background-size: cover; */
-        }
-
-        #head .head-nav {
-            width: 1707px;
-            height: 200px;
-            padding-left: 213px;
-            background: rgba(0,0,0,0.5);
-            overflow: hidden;
-        }
-
-        .head-nav .nav-item1 {
-            width: 213px;
-            height: 130px;
-            /* border: 1px solid #000; */
+        .image_block{
             float: left;
-            margin-right: 213px;
-            /* background: white; */
-            text-align: center;
-            padding-top: 70px;
-            /* background-color: rgba(255, 255, 255 , 0.2 ); */
-        }
-
-        .head-nav .nav-item2 {
-            width: 213px;
-            height: 130px;
+            width: 100px;
+            height: 50px;
             /* border: 1px solid #000; */
-            float: left;
-            margin-right: 213px;
-            /* background-color: rgba(255, 255, 255 , 0.2 ); */
-            text-align: center;
-            padding-top: 70px;
-        }
+            /* background-size: cover;  */
+            display: flex;
 
-        .head-nav .nav-item3 {
-            width: 213px;
-            height: 130px;
-            /* border: 1px solid #000; */
-            float: left;
-            margin-right: 213px;
-            /* background: white; */
-            text-align: center;
-            padding-top: 70px;
-            /* background-color: rgba(255, 255, 255 , 0.2 ); */
         }
-
-        .head-nav .nav-item4 {
-            width: 213px;
-            height: 130px;
-            /* border: 1px solid #000; */
+        #t1c1{
+            /* background: rgb(214, 182, 182); */
+            background: #B35C54;
+            width: 100%;
+            height: 100%;
             float: left;
-            /* background: white; */
-            text-align: center;
-            padding-top: 70px;
-            /* background-color: rgba(255, 255, 255 , 0.2 ); */
-        }
-        #content{
-            width: 1560px;
-            height: 4320px;
-            /* background: #000; */
-            margin-left: 360px;
+            /* height: 800px; */
             /* float: left; */
         }
-        #content .content-content1{
-            width: 1200px;
-            height: 1080px;
-            position: relative;
-            background-color: ;
-            background-image: url(pic/c.jpg);
-            background-size: cover;
-            background-position: right;
-            /* opacity: 0.5; */
-        }
-        #content .content-content1 .content1-pic1{
-            width: 300px;
-            height: 500px;
-            position: absolute;
-            left: 0px;
-            top: 300px;
-            background: white;
-            background-image: url(pic/d.jpg);
-            background-position: right;
-            background-size: cover;
-        }
-        .content1-pic2{
-            width: 300px;
-            height: 500px;
-            position: absolute;
-            left: 450px;
-            top: 300px;
-            background: white;
-            background-image: url(pic/e.jpg);
-            background-position: center;
-            background-size: cover;
-        }
-        .content1-pic3{
-            width: 300px;
-            height: 500px;
-            position: absolute;
-            left: 900px;
-            top: 300px;
-            background: white;
-            background-image: url(pic/f.jpg);
-            background-position: center;
-            background-size: cover;
-        }
-        #content .content-content2{
-            width: 1200px;
-            height: 1080px;
-            background: white;
-            position: relative;
-            /* border: 1px solid #000; */
-            background-image: url(pic/g.jpg);
-            background-size: cover;
-        }
-        .content2-pic1{
-            width: 300px;
-            height: 500px;
-            position: absolute;
-            left: 700px;
-            top: 300px;
-            /* background: #000; */
-            background-image: url(pic/a.svg);
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-        #content .content-content3{
-            width: 1920px;
-            height: 1080px;
-            /* position: absolute; */
-            left: 0px;
-            background: #000;
-            margin-left: -360px;
-        }
-        .content3-pic1{
-            width: 960px;
-            height: 1080px;
-            /* background: gray; */
+        #t2c2{
+            /* background: rgb(214, 182, 182); */
+            background: #FFB2AB;
+            width: 100%;
+            height: 100%;
+            float: left;
+            /* height: 800px; */
             /* float: left; */
-            background-image: url(pic/h.jpg);
-            background-size: cover;
-            background-position: -500px;
-            position: absolute;
-            left: 0px;
         }
-        .content3-pic2{
-            width: 960px;
-            height: 1080px;
-            /* background: rgb(70, 69, 69); */
+        #t3c3{
+            background: #b4fcd4;
+            width: 100%;
+            height: 100%;
+            float: left;
+            /* height: 800px; */
             /* float: left; */
-            background-image: url(pic/i.jpg);
-            background-position: bottom;
-            background-size: cover;
-            position: absolute;
-            left: 960px;
         }
-        #content .content-content4{
-            width: 1200px;
-            height: 1080px;
-            background: #82FFEA;
-            position: relative;
-            background-image: url(pic/l.jpg);
-            background-size: cover;
-            background-position: bottom;
-            /* opacity: 0; */
-            /* border: 1px solid #000; */
+       
+        .image_block img{
+            width: 100%;
+            height: 100%;
         }
-        .content4-head{
-            width: 500px;
-            height: 1080px;
-            /* border: 1px solid #000; */
-            position: absolute;
-            left: 350px;
-            top: 75px;
-            line-height: 70px;
-            text-align: center;
-            letter-spacing: 5px;
-            color: white;
-            /* background: rgba(0,0,0,0.5); */
-            opacity: 0;
+        #t1c1 img{
+            width: 100%;
+            height: 100%;
         }
-        .content4-head:hover{
-            opacity: 1;
+        #t2c2 img{
+            width: 100%;
+            height: 100%;
         }
-        #four:hover{
-            background: rgba(0, 0, 0, 0.9);
-            /* opacity: 1; */
+        /* #t3c3 img{
+            width: 100%;
+            height: 100%;
+        } */
+        .box{
+            width: 800px;
+            height: 600px;
         }
-        #four .title{
-            margin: 0;
-            font-size: 50pt;
-            text-align: center;
-            margin-bottom: 75px;
-
+        .show{
+            display: block;
         }
-        #footer{
-            width: 1920px;
-            height: 250px;
-            background: #B36140;
-            text-align: center;
-            font-size: 100pt;;
-        }
-        #footer p{
-            /* line-height: 100px; */
-            margin: 0;
-            line-height: 250px;
-        }
-        .pic1-p{
-            display: inline;
-            position: absolute;
-            bottom: -100px;
-            left: 50%;
-            transform: translate(-50%);
-            text-align: center;
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
-            font-family: 微軟正黑體;
-            letter-spacing: 5px;
-            border-radius: 15%;
-        }
-        .pic2-p{
-            display: inline;
-            position: absolute;
-            bottom: -100px;
-            left: 50%;
-            transform: translate(-50%);
-            text-align: center;
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
-            font-family: 微軟正黑體;
-            letter-spacing: 5px;
-            border-radius: 15%;
-        }
-        .pic3-p{
-            display: inline;
-            position: absolute;
-            bottom: -100px;
-            left: 50%;
-            transform: translate(-50%);
-            text-align: center;
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
-            font-family: 微軟正黑體;
-            letter-spacing: 5px;
-            border-radius: 15%;
-        }
-        .pic1-pp{
-            position: absolute;
-            text-align: center;
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
-            font-family: 微軟正黑體;
-            letter-spacing: 5px;
-            border-radius: 10%;
-            top: 50%;
-            transform: translate( 0, -50%);
-            left: -425px;
-            width: 300px;
-            line-height: 50px;
-        }
-        .pic1-text{
-            display: inline;
-            position: absolute;
-            text-align: center;
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
-            font-family: 微軟正黑體;
-            letter-spacing: 5px;
-            border-radius: 20%;
-            top: 50%;
-            transform: translate( -50%, -50%);
-            left: 50%;
-            line-height: 50px;
-            padding-left: 10px;
-            padding-right: 10px;
-        }
-        .pic2-text{
-            display: inline;
-            position: absolute;
-            text-align: center;
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
-            font-family: 微軟正黑體;
-            letter-spacing: 5px;
-            border-radius: 10%;
-            top: 50%;
-            transform: translate( -50%, -50%);
-            left: 50%;
-            line-height: 50px;
-        }
-        a{
-            text-decoration: none;
-            color: gray;
-        }
-        a:hover{
-            color: #B36140;
+        .hidden{
+            display: none;
         }
     </style>
 </head>
-
 <body>
-    <div id="head">
-        <!-- <div class="head-transform"></div> -->
-        <div class="head-banner"></div>
-        <div class="head-nav">
-            <div class="nav-item1">
-                <li>
-                    <h1><b><a href="#one">藍洞秘境</a> </b></h1>
-                </li>
-            </div>
-            <div class="nav-item2">
-                <li>
-                    <h1><b><a href="#two">鋼鐵礁</a> </b> </h1>
-                </li>
-            </div>
-            <div class="nav-item3">
-                <li>
-                    <h1><a href="#three">大白沙</a> </h1>
-                </li>
-            </div>
-            <div class="nav-item4">
-                <li>
-                    <h1><b><a href="#four">翠湖</a> </b></h1>
-                </li>
-            </div>
-        </div>
+   
+    <div>
+        <div class="image_block" id="t1"><img id="one" src="pic02/c.png" alt=""></div>
+        <div class="image_block" id="t2"><img id="two" src="pic02/d.png" alt=""></div>
+        <div class="image_block" id="t3"><img id="three" src="pic02/b.png" alt=""></div>
+    </div> 
+    
+    <div class="box" >  
+        <div class="hidden" id="t1c1"></div>
+        <div class="hidden" id="t2c2"></div>
+        <div class="show" id="t3c3"></div>
     </div>
-    <div id="content">
-        <div class="content-content1" id=one>
-            <div class="content1-pic1">
-                <div class="pic1-p">
-                    <p>在深海裡探險的感覺</p>
-                </div>
-            </div>
-            <div class="content1-pic2">
-                <div class="pic2-p">
-                    <p>美人魚海底視角</p>
-                </div>
-            </div>
-            <div class="content1-pic3">
-                <div class="pic3-p">
-                    <p>水中找尋自我</p>
-                </div>
-            </div>
-        </div>
-        <div class="content-content2"id=two>
-            <div class="content2-pic1">
-                <div class="pic1-pp">
-                <p>一下潛後其實就感覺不太到流了，在人工鋼鐵礁附近繞呀繞，今天的能見度大概20米左右~聽教練說這些鋼鐵是人工丟入海裡的，現在上面長滿各種軟珊瑚、海鞘跟一堆躲在輪胎裡面遊玩的魚群們~2004年左右台灣漁業署投放在綠島的鋼鐵礁共有4座，長、寬約各15公尺，除鋼鐵結構外，另有吊掛部分輪胎。 這裡成為了燕魚的新家 ゜)#)))</p>
-                </div>
-            </div>
-        </div>
-        <div class="content-content3"id=three>
-            <div class="content3-pic1">
-                <div class="pic1-text">
-                    <p>來綠島就是要來港口跳水啊不然要幹嘛</p>
-                </div>
-            </div>
-            <div class="content3-pic2">
-                <div class="pic2-text">
-                    <p>大白沙是綠島最大且最完整的沙灘，位於島嶼的西南端，綿延不絕長達數百公尺的白色沙灘是其特色，為綠島三大潛水區之一。浪花拍岸，捲起千堆雪，一個個背著氣瓶的潛水客，縱身於礁岩間五彩繽紛的海底世界；夕陽餘暉映照之下，與情人攜手漫步於沙灘，腳踩著柔白的細沙，聆聽大自然為兩人演奏的樂章，將此刻美景烙印在心底，帶著滿滿的感動。</p>
-                </div>
-            </div>
-        </div>
-        <div class="content-content4"id=four>
-            <div class="content4-head">
-                <h1 class="title">翠湖</h1>
-                <p>綠島（阿美語：Sanasay、卑南語：Sanasan、達悟語：Jitanasey、巴賽語：Sanasai）是一座位於臺灣臺東縣外海、太平洋中的海島，原名火燒島（亦稱雞心嶼或青仔嶼）原先是原住民居住地，為台灣第四大附屬島，行政上屬臺東縣綠島鄉。島上居民以清朝中期從小琉球、東港移民而來的漢人（閩南民系）爲主。在戒嚴時期曾經是關押政治犯的所在，如今則是以觀光產業聞名。在台東地區人口大量外移至西半部的形情下，綠島及蘭嶼是少數人口呈現正成長的鄉鎮，而且以每年2%成長。</p>
-            </div>
-        </div>
-    </div>
-    <div id="footer">
-        <p>FOOTER</p>
-    </div>
-</body>
+    
+    
+    
+    
+    <script>
+        var t1 = document.querySelector("#one");
+        var t2 = document.querySelector("#two");
+        var t3 = document.querySelector("#three");
+        
+        var c1 = document.querySelector("#t1c1");
+        var c2 = document.querySelector("#t2c2");
+        var c3 = document.querySelector("#t3c3");
+        
+        t1.onclick = function () {
+            //隱藏所有的c
+            // t1.src="pic/b.png"
+            // t2.src="pic/a.png"
+            // t3.src="pic/a.png"
+            hidden_all ();
+            c1.classList.add('show');
+            c1.classList.remove('hidden');
+            
+            console.log(c1);
+        }
+        t2.onclick=function(){
+            
+            hidden_all();
+            c2.classList.remove('hidden');
+            c2.classList.add('show');
+            // t2.src="pic/b.png"
+            // t1.src="pic/a.png"
+            // t3.src="pic/a.png"
+            console.log(c2);
+        }
+        t3.onclick=function(){
+            
+            hidden_all();
+            //在顯示這張圖
+            c3.classList.remove('hidden');
+            c3.classList.add('show');
+            // t3.src="pic/b.png"
+            // t2.src="pic/a.png"
+            // t1.src="pic/a.png"
+            console.log(c3);
+        }
 
+        function hidden_all() {
+            
+            c1.classList.add('hidden');
+            c2.classList.add('hidden');
+            c3.classList.add('hidden'); 
+            c1.classList.remove('show');
+            c2.classList.remove('show');
+            c3.classList.remove('show');
+        }
+    </script>
+</body>
 </html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test</title>
+    <style>
+        #all{
+            width: 600px;
+            height: 600px;
+        }
+        .pic{
+            float: left;
+        }
+        .pic1{
+            width: 100%;
+            height: 400px;
+        }
+        .pic2{
+            width: 50%;
+            height: 200px;
+        }
+        .pic3{
+            width: 50%;
+            height: 200px;
+        }
+        .pic img{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="all">
+        <div class="pic1 pic"><img id="p1" src="https://www.zoo.gov.tw/upload/201807/20/201807201513187880.JPG" alt=""> </div>
+        <div class="pic2 pic"><img id="p2" src="https://i.marieclaire.com.tw/aq/2013/10/10/201310111905408281.png" alt=""> </div>
+        <div class="pic3 pic"><img id="p3" src="https://www-ws.gov.taipei/001/Upload/297/relpic/10162/4082204/194dbc96-be87-4249-a021-5558d8e1c041.jpg" alt=""> </div>
+    </div>
+
+
+
+    <script>
+        var p1=document.querySelector("#p1");
+        var p2=document.querySelector("#p2");
+        var p3=document.querySelector("#p3");
+
+
+        p2.onclick=function(){
+            p1.src="https://i.marieclaire.com.tw/aq/2013/10/10/201310111905408281.png"
+        }
+        p3.onclick=function(){
+            p1.src="https://www-ws.gov.taipei/001/Upload/297/relpic/10162/4082204/194dbc96-be87-4249-a021-5558d8e1c041.jpg"
+        }
+    </script>
+</body>
+</html>

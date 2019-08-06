@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tabs html</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .image_block {
+            float: left;
+            width: 200px;
+            height: 100px;
+            /* border: 1px solid #000; */
+            /* background-size: cover;  */
+            /* display: flex; */
+            border: 1px solid #ccc;
+            /* animation: ani0 ; */
+            /* animation-fill-mode: forwards; */
+        }
+
+        .image_block:active {
+            /* border-bottom: 1px solid #fff; */
+            /* animation: ani0 1s; */
+            /* animation-fill-mode: forwards; */
+            border-bottom: 3px solid rgb(255, 55, 55);
+
+        }
+
+        /* @keyframes ani0{
+            0%{
+                border-bottom: 1px solid #ccc;
+            }
+            100%{
+                border-bottom: 1px solid #fff;
+            }
+        }  */
+
+        #t1c1 {
+            /* background: rgb(214, 182, 182); */
+            background: #B35C54;
+            width: 1570px;
+            height: 161.8px;
+            /* float: left; */
+            border: 1px solid #ccc;
+            /* height: 800px; */
+            /* float: left; */
+        }
+
+        #t2c2 {
+            /* background: rgb(214, 182, 182); */
+            background: #FFB2AB;
+            width: 1570px;
+            height: 161.8px;
+            /* float: left; */
+            border: 1px solid #ccc;
+            /* height: 800px; */
+            /* float: left; */
+        }
+
+        #t3c3 {
+            background: #b4fcd4;
+            width: 1570px;
+            height: 161.8px;
+            /* float: left; */
+            border: 1px solid #ccc;
+            /* height: 800px; */
+            /* float: left; */
+        }
+
+        .image_block img {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* #t1c1 img{
+            width: 100%;
+            height: 100%;
+        } */
+        /* #t2c2 img{
+            width: 100%;
+            height: 100%;
+        } */
+        /* #t3c3 img{
+            width: 100%;
+            height: 100%;
+        } */
+        .box {
+            width: 100%;
+            height: calc(100vh - 100px);
+            float: left;
+            /* position: absolute; */
+            /* margin-top: 98.5px; */
+        }
+
+        .show {
+            display: block;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        @media screen and (max-width: 414px) {
+            .image_block {
+                /* float: left; */
+                width: 33.3%;
+                height: 50px;
+                /* border: 1px solid #000; */
+                /* background-size: cover;  */
+                /* display: flex; */
+
+            }
+
+            .box {
+                width: 100%;
+                height: calc(100vh - 50px);
+                position: absolute;
+                top: 50px;
+            }
+
+            #t1c1 {
+                /* background: rgb(214, 182, 182); */
+                background: #B35C54;
+                width: 100%;
+                height: 100%;
+                /* float: left; */
+                /* height: 800px; */
+                /* float: left; */
+            }
+
+            #t2c2 {
+                /* background: rgb(214, 182, 182); */
+                background: #FFB2AB;
+                width: 100%;
+                height: 100%;
+                /* float: left; */
+                /* height: 800px; */
+                /* float: left; */
+            }
+
+            #t3c3 {
+                background: #b4fcd4;
+                width: 100%;
+                height: 100%;
+                /* float: left; */
+                /* height: 800px; */
+                /* float: left; */
+            }
+        }
+    </style>
+    <meta name="google-site-verification" content="QEgxfua4W_GP32vUW2vZAHLQV8j9CM0rxUD4V_VCM98" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144762690-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-144762690-1');
+    </script>
+</head>
+
+<body>
+
+    <div>
+        <div class="image_block" id="t1"><img id="one" src="pic02/e.png" alt=""></div>
+        <div class="image_block" id="t2"><img id="two" src="pic02/e.png" alt=""></div>
+        <div class="image_block" id="t3"><img id="three" src="pic02/e.png" alt=""></div>
+    </div>
+
+    <div class="box">
+        <div class="hidden" id="t1c1"></div>
+        <div class="hidden" id="t2c2"></div>
+        <div class="show" id="t3c3"></div>
+    </div>
+
+
+
+
+    <script>
+        var t1 = document.querySelector("#one");
+        var t2 = document.querySelector("#two");
+        var t3 = document.querySelector("#three");
+
+        var c1 = document.querySelector("#t1c1");
+        var c2 = document.querySelector("#t2c2");
+        var c3 = document.querySelector("#t3c3");
+
+        t1.onclick = function () {
+            //隱藏所有的c
+            t1.src = "pic02/a.png"
+            t2.src = "pic02/e.png"
+            t3.src = "pic02/e.png"
+            hidden_all();
+            c1.classList.add('show');
+            c1.classList.remove('hidden');
+
+            console.log(c1);
+        }
+        t2.onclick = function () {
+
+            hidden_all();
+            c2.classList.remove('hidden');
+            c2.classList.add('show');
+            t2.src = "pic02/a.png"
+            t1.src = "pic02/e.png"
+            t3.src = "pic02/e.png"
+            console.log(c2);
+        }
+        t3.onclick = function () {
+
+            hidden_all();
+            //在顯示這張圖
+            c3.classList.remove('hidden');
+            c3.classList.add('show');
+            t3.src = "pic02/a.png"
+            t2.src = "pic02/e.png"
+            t1.src = "pic02/e.png"
+            console.log(c3);
+        }
+
+        function hidden_all() {
+
+            c1.classList.add('hidden');
+            c2.classList.add('hidden');
+            c3.classList.add('hidden');
+            c1.classList.remove('show');
+            c2.classList.remove('show');
+            c3.classList.remove('show');
+        }
+    </script>
+</body>
+
+</html>

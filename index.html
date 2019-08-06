@@ -1,243 +1,441 @@
 <!DOCTYPE html>
-<html lang="zh-tw">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>tabs html</title>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-        }
-
-        .image_block {
-            float: left;
-            width: 200px;
-            height: 100px;
-            /* border: 1px solid #000; */
-            /* background-size: cover;  */
-            /* display: flex; */
-            border: 1px solid #ccc;
-            /* animation: ani0 ; */
-            /* animation-fill-mode: forwards; */
-        }
-
-        .image_block:active {
-            /* border-bottom: 1px solid #fff; */
-            /* animation: ani0 1s; */
-            /* animation-fill-mode: forwards; */
-            border-bottom: 3px solid rgb(255, 55, 55);
-
-        }
-
-        /* @keyframes ani0{
-            0%{
-                border-bottom: 1px solid #ccc;
-            }
-            100%{
-                border-bottom: 1px solid #fff;
-            }
-        }  */
-
-        #t1c1 {
-            /* background: rgb(214, 182, 182); */
-            background: #B35C54;
-            width: 1570px;
-            height: 161.8px;
-            /* float: left; */
-            border: 1px solid #ccc;
-            /* height: 800px; */
-            /* float: left; */
-        }
-
-        #t2c2 {
-            /* background: rgb(214, 182, 182); */
-            background: #FFB2AB;
-            width: 1570px;
-            height: 161.8px;
-            /* float: left; */
-            border: 1px solid #ccc;
-            /* height: 800px; */
-            /* float: left; */
-        }
-
-        #t3c3 {
-            background: #b4fcd4;
-            width: 1570px;
-            height: 161.8px;
-            /* float: left; */
-            border: 1px solid #ccc;
-            /* height: 800px; */
-            /* float: left; */
-        }
-
-        .image_block img {
-            width: 100%;
-            height: 100%;
-        }
-
-        /* #t1c1 img{
-            width: 100%;
-            height: 100%;
-        } */
-        /* #t2c2 img{
-            width: 100%;
-            height: 100%;
-        } */
-        /* #t3c3 img{
-            width: 100%;
-            height: 100%;
-        } */
-        .box {
-            width: 100%;
-            height: calc(100vh - 100px);
-            float: left;
-            /* position: absolute; */
-            /* margin-top: 98.5px; */
-        }
-
-        .show {
-            display: block;
-        }
-
-        .hidden {
-            display: none;
-        }
-
-        @media screen and (max-width: 414px) {
-            .image_block {
-                /* float: left; */
-                width: 33.3%;
-                height: 50px;
-                /* border: 1px solid #000; */
-                /* background-size: cover;  */
-                /* display: flex; */
-
-            }
-
-            .box {
-                width: 100%;
-                height: calc(100vh - 50px);
-                position: absolute;
-                top: 50px;
-            }
-
-            #t1c1 {
-                /* background: rgb(214, 182, 182); */
-                background: #B35C54;
-                width: 100%;
-                height: 100%;
-                /* float: left; */
-                /* height: 800px; */
-                /* float: left; */
-            }
-
-            #t2c2 {
-                /* background: rgb(214, 182, 182); */
-                background: #FFB2AB;
-                width: 100%;
-                height: 100%;
-                /* float: left; */
-                /* height: 800px; */
-                /* float: left; */
-            }
-
-            #t3c3 {
-                background: #b4fcd4;
-                width: 100%;
-                height: 100%;
-                /* float: left; */
-                /* height: 800px; */
-                /* float: left; */
-            }
-        }
-    </style>
-    <meta name="google-site-verification" content="QEgxfua4W_GP32vUW2vZAHLQV8j9CM0rxUD4V_VCM98" />
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144762690-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-144762690-1');
-    </script>
+    <title>紋身藝術</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="dist/css/swiper.min.css">
+    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="#">
+                <h1 class="funkzilla">funkzilla</h1>
+            </a>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link text-white" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link text-white" href="#content1-Outer-layer">about us</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link text-white" href="#tatooists">tatooists</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link text-white" href="#customer">painting <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link text-white" href="#kind">style</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link text-white" href="#end-content">environment </a>
+                </li>
+            </ul>
 
-    <div>
-        <div class="image_block" id="t1"><img id="one" src="pic02/e.png" alt=""></div>
-        <div class="image_block" id="t2"><img id="two" src="pic02/e.png" alt=""></div>
-        <div class="image_block" id="t3"><img id="three" src="pic02/e.png" alt=""></div>
+        </div>
+    </nav>
+    <div class="banner container-fluid">
+
+        <h1 class="title">我們歡迎各種皮膚</h1>
+        <h4 class="title2">我們很榮幸有機會將我們的藝術品放在您身上。</h4>
+        <h4 class="title2">將您的想法，概念和故事帶給我們，</h4>
+        <h4 class="title2">讓我們的藝術家與您合作，以最具創意和獨特的方式講述您的故事。</h4>
+    </div>
+    <div class="all">
+        <div id="content1-Outer-layer">
+            <div class="content1 container-fluid" id="content1">
+                <div class="content1-text">
+                    <h5 class="story">2017年的夏天，馬成和老趙因為拜師學藝而相遇，雖然兩人的風格相異，一個擅長美式，一個鍾愛日式，
+                        一見如故的兩人在紋身工作室相談甚歡，同樣熱愛紋身的兩人成為一路上的夥伴互相扶持，也曾經窮到沒有錢吃飯，
+                        但他們不曾想過要放棄，直至今日，兩人已在台中精明路，持續創作美麗的紋身藝術。</h5>
+                </div>
+            </div>
+        </div>
+        <div class="movie-bg">
+            <video class="movie" src="Funkzillia.mp4" autoplay loop="loop">
+                <source src="Funkzillia.mp4"></video>
+        </div>
+        <!-- <div class="interval container-fluid">
+            <div class="arrow animated bounce infinite"></div>
+            <h1 class="call">歡迎你先瀏覽我們御用攝影師所製作的影片</h1>
+        </div> -->
+        <div class="tatooists container-fluid" id="tatooists">
+            <div class="tatooiststop">
+                <div class="tatooiststop-pic">
+                </div>
+                <div class="tatooiststop-text">
+                    <div class="tatooiststop-text-content">
+                        <h1> <b>馬成</b> </h1> <br>
+                        <h4><b>台中刺青 | FUNKZILLA | 刺青師 | 馬成</b></h4><br>
+                        <h4 class="Ninja">畢業於彰化藝術高中，自小荒廢課業，忍乳負重，</h4>
+                        <h4 class="Ninja">立志成為一名刺青師，抱著不成功便成仁的心態，</h4>
+                        <h4 class="Ninja">不顧家長的反對，幸幸然走向職業刺青師的路程，</h4>
+                        <h4 class="Ninja"> 即使前方再多困難與阻礙，也無法抵擋滿腔的熱血，</h4>
+                        <h4 class="Ninja">是一名對日式傳統刺青抱持著夢想的狂熱青年，號稱寶島夢想家。</h4><br><br>
+                        <h4 class="Ninja"><b>座右銘-明天依然會是個適合刺青的好日子呢</b></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="tatooistsbottom">
+                <div class="tatooistbottom-pic">
+                </div>
+                <div class="tatooistbottom-text">
+                    <div class="tatooistbottom-text-content">
+                        <h1> <b>老趙</b> </h1><br>
+                        <h4><b>台中刺青 | FUNKZILLA | 刺青師 | 老趙</b></h4><br>
+                        <h4 class="Ninja" >小時候看火影忍者的時候常常幻想自己會忍術，</h4>
+                        <h4 class="Ninja">可能也因為這樣我真的慢慢地學會了幾招，</h4>
+                        <h4 class="Ninja">偶爾趁沒人注意時施展我的木葉忍術大法，</h4>
+                        <h4 class="Ninja"> 其實我也不是想隱瞞，只是我不太信任身上沒刺青的人，</h4>
+                        <h4 class="Ninja">來找我刺青，我就會把我所學的都傳授給你，記得來找我。</h4><br><br>
+                        <h4 class="Ninja"><b>座右銘-老趙是個很ㄎㄧㄤ的八代目火影</b></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="spacing"></div>
+        <div class="customer" id="customer">
+            <div class="customer-text">
+                <h1 class="text-white customer-texts">待領取畫作</h1>
+            </div>
+            <!-- Slider main container -->
+            <div class="swiper-container sc1">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper sw1">
+                    <!-- Slides -->
+                    <div class="swiper-slide swiper-one"></div>
+                    <div class="swiper-slide swiper-two"></div>
+                    <div class="swiper-slide swiper-three"></div>
+                    <div class="swiper-slide swiper-four"></div>
+                    <div class="swiper-slide swiper-five"></div>
+                    <div class="swiper-slide swiper-six"></div>
+                    <div class="swiper-slide swiper-seven"></div>
+                </div>
+                <!-- If we need pagination -->
+                <!-- <div class="swiper-pagination sp1"></div> -->
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev swiper-button-white"></div>
+                <div class="swiper-button-next swiper-button-white"></div>
+
+                <!-- If we need scrollbar -->
+                <!-- <div class="swiper-scrollbar"></div> -->
+            </div>
+        </div>
+        <div class="kind" id="kind">
+            <div class="swiper-container sc2">
+                <div class="swiper-wrapper sw2">
+                    <div class="swiper-slide slide2 text-white">
+                        <div class="swiper2-one slide2-2"></div>舊美式
+                    </div>
+                    <div class="swiper-slide slide2 text-white">
+                        <div class="swiper2-two slide2-2"></div>新美式
+                    </div>
+                    <div class="swiper-slide slide2  text-white">
+                        <div class="swiper2-three slide2-2"></div>日式傳統
+                    </div>
+                    <div class="swiper-slide slide2  text-white">
+                        <div class="swiper2-four slide2-2"></div>肖像寫實
+                    </div>
+                    <div class="swiper-slide slide2  text-white">
+                        <div class="swiper2-five slide2-2"></div>幾何圖騰
+                    </div>
+                    <div class="swiper-slide slide2  text-white">
+                        <div class="swiper2-six slide2-2"></div>小圖文字
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <!-- <div class="swiper-pagination sp2"></div> -->
+            </div>
+        </div>
+        <div class="container-fluid" id="end-content">
+            <div class="end-content-pic"></div>
+            <div class="end-content-text"></div>
+        </div>
+        <div class="container-fluid footer">
+            <div class="icon-box">
+                <div class="ig-icon icon">
+                    <a href="https://www.instagram.com/funkzilla_ink/" target="_blank">
+                        <img src="pic/icon-01.png" alt="">
+                    </a>
+                </div>
+                <div class="fb-icon icon">
+                    <a href="https://www.facebook.com/funkzilla.ink/" target="_blank">
+                        <img src="pic/2019-08-02-icon-02.png" alt="">
+                    </a>
+                </div>
+                <!-- <div class="line-it-button" data-lang="zh_Hant" data-type="share-d" data-lineid="@a60810" data-count="true" data-home="true" style="display: none;"></div> -->
+                <div class="line-icon icon">
+                    <a href="http://line.me/ti/p/@a60810" target="_blank">
+                        <img src="pic/2019-08-02-icon-03.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-text">
+                <p>
+                    <h5>未滿20歲不接受刺青 </h5>
+                    <h5>TEL:0976153031</h5>
+                    <h5>營業時間15:00PM~23:00PM</h5>
+                    <h5>Taichung，TAIWAN台中市西屯區精明路60號</h5>
+                    <h6>© 台中高美濕地 2019 僅用於課程學習用途，素材如侵權，請來信告知。</h6>
+                </p>
+            </div>
+            <div class="footer-goolemap" id="map"></div>
+        </div>
     </div>
 
-    <div class="box">
-        <div class="hidden" id="t1c1"></div>
-        <div class="hidden" id="t2c2"></div>
-        <div class="show" id="t3c3"></div>
-    </div>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer">
+    </script>
+
 
 
 
 
     <script>
-        var t1 = document.querySelector("#one");
-        var t2 = document.querySelector("#two");
-        var t3 = document.querySelector("#three");
+        var mySwiper = new Swiper('.sc1', {
+            // Optional parameters
+            // direction: 'vertical',// 垂直切换选项
+            loop: true, // 循环模式选项
 
-        var c1 = document.querySelector("#t1c1");
-        var c2 = document.querySelector("#t2c2");
-        var c3 = document.querySelector("#t3c3");
+            // 如果需要分页器
+            // If we need pagination
+            pagination: {
+                el: '.sp1',
+            },
 
-        t1.onclick = function () {
-            //隱藏所有的c
-            t1.src = "pic02/a.png"
-            t2.src = "pic02/e.png"
-            t3.src = "pic02/e.png"
-            hidden_all();
-            c1.classList.add('show');
-            c1.classList.remove('hidden');
+            // 如果需要前进后退按钮
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
 
-            console.log(c1);
-        }
-        t2.onclick = function () {
-
-            hidden_all();
-            c2.classList.remove('hidden');
-            c2.classList.add('show');
-            t2.src = "pic02/a.png"
-            t1.src = "pic02/e.png"
-            t3.src = "pic02/e.png"
-            console.log(c2);
-        }
-        t3.onclick = function () {
-
-            hidden_all();
-            //在顯示這張圖
-            c3.classList.remove('hidden');
-            c3.classList.add('show');
-            t3.src = "pic02/a.png"
-            t2.src = "pic02/e.png"
-            t1.src = "pic02/e.png"
-            console.log(c3);
-        }
-
-        function hidden_all() {
-
-            c1.classList.add('hidden');
-            c2.classList.add('hidden');
-            c3.classList.add('hidden');
-            c1.classList.remove('show');
-            c2.classList.remove('show');
-            c3.classList.remove('show');
+            // 如果需要滚动条
+            // And if we need scrollbar
+            // scrollbar: {
+            //     el: '.swiper-scrollbar',
+            // },
+        })
+        var swiper = new Swiper('.sc2', {
+            loop: true,
+            autoplay: {
+                delay: 2000,
+                // duration:5000,
+                stopOnLastSlide: false,
+                disableOnInteraction: true,
+            },
+            /*autoplay: {
+            delay: 3000,
+            stopOnLastSlide: false,
+            disableOnInteraction: true,
+            },*/
+            slidesPerView: 3,
+            spaceBetween: 30,
+            freeMode: true,
+            pagination: {
+                el: '.sp2',
+                clickable: true, 
+            },
+            breakpoints:{
+                1024:{
+                    slidesPerView:2,
+                    spaceBetween: 30,
+                },
+                414:{
+                    slidesPerView:1,
+                    spaceBetween: 30,
+                }
+            }
+        });
+    </script>
+    <script>
+        // Initialize and add the map
+        function initMap() {
+            // The location of Uluru
+            var uluru = { lat: 24.158098, lng: 120.655786 };
+            // The map, centered at Uluru
+            var map = new google.maps.Map(
+                document.getElementById('map'), {
+                    zoom: 17,
+                    center: uluru,
+                    styles: [
+                        {
+                            "featureType": "all",
+                            "elementType": "labels.text.fill",
+                            "stylers": [
+                                {
+                                    "color": "#ffffff"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "all",
+                            "elementType": "labels.text.stroke",
+                            "stylers": [
+                                {
+                                    "color": "#1C2C36"
+                                },
+                                {
+                                    "lightness": 13
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "administrative",
+                            "elementType": "geometry.fill",
+                            "stylers": [
+                                {
+                                    "color": "#1C2C36"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "administrative",
+                            "elementType": "geometry.stroke",
+                            "stylers": [
+                                {
+                                    "color": "#D0D1CC"
+                                },
+                                {
+                                    "lightness": 14
+                                },
+                                {
+                                    "weight": 1.4
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "landscape",
+                            "elementType": "all",
+                            "stylers": [
+                                {
+                                    "color": "#D0D1CC"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "poi",
+                            "elementType": "geometry",
+                            "stylers": [
+                                {
+                                    "color": "#0c4152"
+                                },
+                                {
+                                    "lightness": 5
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "road.highway",
+                            "elementType": "geometry.fill",
+                            "stylers": [
+                                {
+                                    "color": "#1C2C36"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "road.highway",
+                            "elementType": "geometry.stroke",
+                            "stylers": [
+                                {
+                                    "color": "#0b434f"
+                                },
+                                {
+                                    "lightness": 25
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "road.arterial",
+                            "elementType": "geometry.fill",
+                            "stylers": [
+                                {
+                                    "color": "#1C2C36"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "road.arterial",
+                            "elementType": "geometry.stroke",
+                            "stylers": [
+                                {
+                                    "color": "#0b3d51"
+                                },
+                                {
+                                    "lightness": 16
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "road.local",
+                            "elementType": "geometry",
+                            "stylers": [
+                                {
+                                    "color": "#1C2C36"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "transit",
+                            "elementType": "all",
+                            "stylers": [
+                                {
+                                    "color": "#146474"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "water",
+                            "elementType": "all",
+                            "stylers": [
+                                {
+                                    "color": "#021019"
+                                }
+                            ]
+                        }
+                    ]
+                });
+            // The marker, positioned at Uluru
+            var marker = new google.maps.Marker({ position: uluru, map: map });
         }
     </script>
+    <!--Load the API from the specified URL
+        * The async attribute allows the browser to render the page while the API loads
+        * The key parameter will contain your own API key (which is not needed for this tutorial)
+        * The callback parameter executes the initMap() function
+        -->
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAewqTlA2lMjzPRrZkPT4NoMlBWvPY220&callback=initMap">
+        </script>
 </body>
 
 </html>

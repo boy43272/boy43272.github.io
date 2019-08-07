@@ -28,6 +28,10 @@ h5 {
     position: relative;
     z-index: 2;
 } */
+.nav-link:hover {
+    opacity: 0.4;
+}
+
 .navbar {
     position: fixed;
     z-index: 5;
@@ -50,6 +54,7 @@ h5 {
     background-size: cover;
     background-position: top;
     position: fixed;
+    animation: ani 2s;
     /* z-index: -1; */
 }
 
@@ -141,10 +146,20 @@ h5 {
     font-family: SimSun;
 }
 
+@keyframes ani {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 .movie-bg {
     max-width: 100%;
     height: 50vh;
-    /* background-color: #000; */
+    background-color: #000;
     /* background-color: rgba(0, 0, 0, 0.8); */
     display: flex;
     justify-content: center;
@@ -206,6 +221,11 @@ h5 {
     float: left;
     background-image: url(pic/馬成.jpg);
     background-size: cover;
+    border-radius: 5PX;
+}
+
+.tatooiststop-pic:hover {
+    opacity: 0.7;
 }
 
 .tatooiststop-text {
@@ -244,6 +264,11 @@ h5 {
     background-image: url(pic/老趙.jpg);
     background-size: cover;
     background-position: bottom;
+    border-radius: 5PX;
+}
+
+.tatooistbottom-pic:hover {
+    opacity: 0.7;
 }
 
 .tatooistbottom-text {
@@ -265,7 +290,7 @@ h5 {
 .spacing {
     max-width: 100%;
     height: 50vh;
-    /* background-color: rgba(0, 0, 0, 0.8); */
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 .customer {
@@ -367,12 +392,13 @@ h5 {
     align-items: center; */
     background-color: #1C2C36;
     padding: 10px;
-    font-size: 50pt;
+    font-size: 30pt;
     writing-mode: vertical-lr;
+    text-align: end;
 }
 
 .slide2-2 {
-    font-size: 50pt;
+    font-size: 30pt;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -386,7 +412,7 @@ h5 {
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-
+    margin-right: 7%;
 }
 
 .swiper2-two {
@@ -396,6 +422,7 @@ h5 {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    margin-right: 7%;
 }
 
 .swiper2-three {
@@ -405,6 +432,7 @@ h5 {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    margin-right: 7%;
 }
 
 .swiper2-four {
@@ -414,6 +442,7 @@ h5 {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    margin-right: 7%;
 }
 
 .swiper2-five {
@@ -423,6 +452,7 @@ h5 {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    margin-right: 7%;
 }
 
 .swiper2-six {
@@ -432,6 +462,7 @@ h5 {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    margin-right: 7%;
 }
 
 #end-content {
@@ -475,6 +506,10 @@ h5 {
     cursor: pointer;
 }
 
+.icon-box .icon:hover {
+    opacity: 0.6;
+}
+
 .footer-text {
     width: 30%;
     height: 155px;
@@ -496,16 +531,17 @@ h5 {
 }
 
 @media screen and (max-width:414px) {
-    .funkzilla{
+    .funkzilla {
         color: gray;
     }
+
     .navbar {
         position: fixed;
         z-index: 5;
-        background-color:rgba(255, 255, 255, 0.856);
+        background-color: rgba(255, 255, 255, 0.856);
         width: 100%;
     }
-    
+
     .banner {
         max-width: 414px;
         width: 100%;

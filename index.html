@@ -9,9 +9,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="dist/css/swiper.min.css">
-    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/00.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script>
+        var vid = document.getElementById("videomovie");
+        vid.play();
+    </script>
 </head>
 
 <body>
@@ -26,7 +31,7 @@
             </a>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link text-white" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link text-white" href="#">TOP <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link text-white" href="#content1-Outer-layer">about us</a>
@@ -57,7 +62,8 @@
     <div class="all">
         <div id="content1-Outer-layer">
             <div class="content1 container-fluid" id="content1">
-                <div class="content1-text">
+                <div class="content1-text" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="100"
+                    data-aos-offset="0" data-aos-duration="500">
                     <h5 class="story">2017年的夏天，馬成和老趙因為拜師學藝而相遇，雖然兩人的風格相異，一個擅長美式，一個鍾愛日式，
                         一見如故的兩人在紋身工作室相談甚歡，同樣熱愛紋身的兩人成為一路上的夥伴互相扶持，也曾經窮到沒有錢吃飯，
                         但他們不曾想過要放棄，直至今日，兩人已在台中精明路，持續創作美麗的紋身藝術。</h5>
@@ -65,8 +71,8 @@
             </div>
         </div>
         <div class="movie-bg">
-            <video class="movie" src="Funkzillia.mp4" autoplay loop="loop">
-                <source src="Funkzillia.mp4"></video>
+            <video class="movie" id="videomovie" muted loop autoplay="autoplay">
+                <source src="/Funkzillia.mp4" tpye="video/mp4" /></video>
         </div>
         <!-- <div class="interval container-fluid">
             <div class="arrow animated bounce infinite"></div>
@@ -96,7 +102,7 @@
                     <div class="tatooistbottom-text-content">
                         <h1> <b>老趙</b> </h1><br>
                         <h4><b>台中刺青 | FUNKZILLA | 刺青師 | 老趙</b></h4><br>
-                        <h4 class="Ninja" >小時候看火影忍者的時候常常幻想自己會忍術，</h4>
+                        <h4 class="Ninja">小時候看火影忍者的時候常常幻想自己會忍術，</h4>
                         <h4 class="Ninja">可能也因為這樣我真的慢慢地學會了幾招，</h4>
                         <h4 class="Ninja">偶爾趁沒人注意時施展我的木葉忍術大法，</h4>
                         <h4 class="Ninja"> 其實我也不是想隱瞞，只是我不太信任身上沒刺青的人，</h4>
@@ -186,11 +192,11 @@
             </div>
             <div class="footer-text">
                 <p>
-                    <h5>未滿20歲不接受刺青 </h5>
+                    <h5>未滿 20歲不接受刺青 </h5>
                     <h5>TEL:0976153031</h5>
-                    <h5>營業時間15:00PM~23:00PM</h5>
+                    <h5><b>營業時間</b>15:00PM~23:00PM</h5>
                     <h5>Taichung，TAIWAN台中市西屯區精明路60號</h5>
-                    <h6>© funkzilla tatoo 2019 僅用於課程學習用途，素材如侵權，請來信告知。</h6>
+                    <h6>© 台中高美濕地 2019 僅用於課程學習用途，素材如侵權，請來信告知。</h6>
                 </p>
             </div>
             <div class="footer-goolemap" id="map"></div>
@@ -214,11 +220,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
     <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer">
     </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 
 
 
-
+    <script>
+        AOS.init();
+    </script>
     <script>
         var mySwiper = new Swiper('.sc1', {
             // Optional parameters
@@ -246,12 +255,17 @@
         })
         var swiper = new Swiper('.sc2', {
             loop: true,
+            observer: true,
+            // preloadImages:true,
+            // updateOnImagesReady: true,
             autoplay: {
                 delay: 2000,
                 // duration:5000,
-                stopOnLastSlide: false,
-                disableOnInteraction: true,
+                disableOnInteraction: false,
+                // stopOnLastSlide: false,
+                // disableOnInteraction: true,
             },
+
             /*autoplay: {
             delay: 3000,
             stopOnLastSlide: false,
@@ -262,18 +276,19 @@
             freeMode: true,
             pagination: {
                 el: '.sp2',
-                clickable: true, 
+                clickable: true,
             },
-            breakpoints:{
-                1024:{
-                    slidesPerView:2,
+            breakpoints: {
+                1024: {
+                    slidesPerView: 2,
                     spaceBetween: 30,
                 },
-                414:{
-                    slidesPerView:1,
+                414: {
+                    slidesPerView: 1,
                     spaceBetween: 30,
                 }
-            }
+            },
+
         });
     </script>
     <script>
@@ -436,6 +451,7 @@
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAewqTlA2lMjzPRrZkPT4NoMlBWvPY220&callback=initMap">
         </script>
+
 </body>
 
 </html>
